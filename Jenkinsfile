@@ -4,11 +4,11 @@ pipeline {
     stage("verify tooling") {
       steps {
         sh '''
-          docker version
-          docker info
-          docker-compose version 
-          curl --version
-          jq --version
+          /usr/local/bin/docker version
+          /usr/local/bin/docker info
+          /usr/local/bin/docker-compose version 
+          /bin/curl --version
+          /bin/jq --version
         '''
       }
     }
