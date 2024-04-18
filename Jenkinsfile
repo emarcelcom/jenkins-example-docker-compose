@@ -5,6 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 sh '''
+                PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:/usr/local/bin
                 echo $PATH
                 docker version
                 docker info
