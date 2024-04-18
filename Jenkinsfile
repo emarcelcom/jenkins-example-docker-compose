@@ -4,9 +4,8 @@ pipeline {
     stage("verify tooling") {
       steps {
         sh '''
-          #!/bin/bash
-          set -x  # Print executed commands for debugging
-          export PATH=$PATH:/usr/local/bin  # Add Docker path if needed
+          PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/syno/sbin:/usr/syno/bin:/usr/local/sbin:/usr/local/bin
+          export PATH
           docker version
           docker info
           docker-compose version 
